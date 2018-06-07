@@ -1,2 +1,2 @@
 # AndroidLearning
-Android study notes.
+Android learn notes.
