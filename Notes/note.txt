@@ -1,0 +1,122 @@
+
+
+**************************************
+
+20180530
+有关横竖屏的，视频里说的是，在资源文件夹下面新建一个layout_lan文件夹相同的XML文件，系统会自动判断手机现在的状态，如果是横屏会自动显示那个横屏的layout内容。
+视频里用的是Eclipse，我用的是Android studio，没设置好
+
+
+
+
+
+
+
+
+**************************************
+
+
+
+资源的使用：
+
+字符串资源
+//layout
+android:text="@string/test"
+
+//strings.xml
+<resources>
+    <string name="test">测试</string>
+</resources>
+
+//java
+Resources res = getResources();
+String str = res.getString(R.string.test);
+
+
+颜色资源
+十六进制RGB，颜色资源res/values/colors.xml
+<color name="colorPrimary">#3F51B5</color>
+
+//layout
+android:background="@color/colorPrimary"
+各个界面都是一致的，在colors.xml，一个地方修改就行了
+
+
+图像资源
+Android 支持 PNG JPEG GIF，官方建议不要使用 GIF 格式，PNG 是首选格式
+图像文件，res/drawable/
+
+
+尺寸资源
+res/dimens/， @dimen/btn_height
+
+
+
+
+**************************************
+
+触屏事件
+1\重写 onTouchEvent
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+//        int action = event.getAction(); //得到触控动作
+//        switch (action) {
+//            case MotionEvent.ACTION_DOWN; //按下
+//            MotionEvent.ACTION_MOVE: //移动
+//            MotionEvent.ACTION_UP: //抬起
+//        }
+
+//        //得到当前触控像素位置，原点在左上角
+//        float x = event.getX();
+//        float y = event.getY();
+
+        Log.i("test", "onTouchEvent");
+
+        //默认返回 false，表示事件没有处理完，要向上传递
+        return super.onTouchEvent(event);
+    }
+
+
+2\在控件上注册方法 setOnTouchEventListener(..)
+testView = findViewById(R.id.next_page_test_view);
+        //在控件上注册触屏事件，只有在控件的范围内才方法才会响应
+        testView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                //...
+                return true;
+            }
+        });
+
+
+
+
+**************************************
+
+
+线性布局
+
+<LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="460dp"
+        android:orientation="horizontal" <!-- 排列方式，水平 垂直 -->
+        android:gravity="center"  <!-- 对齐方式， 底部对齐 居中。。。-->
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="43dp">
+    </LinearLayout>
+
+相对布局，相对于容器、控件
+android:layout_marginLeft="162dp"
+layout_alignParentLeft
+layout_alignLeft
+layout_toRightOf:"@+id/.."
+layout_alignBaseline:"@+id/.." 基线对齐
+layout_constraintTop_toBottomOf
+
+layout_centerInParent
+layout_margin
+
+
+
+
