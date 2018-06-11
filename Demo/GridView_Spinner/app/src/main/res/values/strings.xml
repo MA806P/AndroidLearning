@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GridView_Spinner</string>
+
+
+    <string-array name="string_data">
+        <item>AAA</item>
+        <item>BBB</item>
+        <item>CCC</item>
+        <item>DDD</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ma806p.servicetestdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyService">
+            <intent-filter>
+                <action android:name="heying.myservice" />
+            </intent-filter>
+        </service>
+        <service android:name=".ComputeService">
+            <intent-filter>
+                <action android:name="heying.computeService" />
+            </intent-filter>
+        </service>
+
+
+
+
+
+
+
+        <!-- 第二个测试 系统服务 -->
+        <activity android:name=".MainSystemServiceActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <service android:name=".MySystemService">
+            <intent-filter>
+                <action android:name="heying.mysystemservice" />
+            </intent-filter>
+        </service>
+
+
+    </application>
+
+</manifest>

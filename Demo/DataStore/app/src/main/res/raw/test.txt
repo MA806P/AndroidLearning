@@ -1,0 +1,4 @@
+指针
+Hello world !
+This is test.
+中文试试

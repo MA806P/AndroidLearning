@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CustomView2</string>
+
+    <declare-styleable name="MyTitleView">
+        <attr name="title" format="string"/>
+
+    </declare-styleable>
+
+</resources>

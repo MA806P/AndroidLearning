@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NextPageActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="164dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginRight="164dp"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary"
+        />
+
+    <LinearLayout
+        android:id="@+id/LineLayoutOrientationTest"
+        android:layout_width="0dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_next_page_test_view_bc"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Null" />
+
+        <Button
+            android:id="@+id/horizontal_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="horizontal" />
+
+        <Button
+            android:id="@+id/vertical_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LineLayoutGravityTest"
+        android:layout_width="0dp"
+        android:layout_height="329dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_next_page_test_view_2bc"
+        android:gravity="top|left"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LineLayoutOrientationTest">
+
+
+        <CheckBox
+            android:id="@+id/checkBoxTop"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Top" />
+
+        <CheckBox
+            android:id="@+id/checkBoxBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Bottom" />
+
+        <CheckBox
+            android:id="@+id/checkBoxLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Left" />
+
+        <CheckBox
+            android:id="@+id/checkBoxRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Right" />
+
+        <CheckBox
+            android:id="@+id/Center"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Center" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
