@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_ocr">OCRActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_barcode">BarcodeActivity</string>
+
+    <string name="scanner_activity">ZBar Scanner - Full Activity</string>
+    <string name="scanner_fragment_activity">ZBar Scanner - Full Fragment Activity</string>
+    <string name="simple_scanner_activity">ZBar Scanner - Simple Activity</string>
+    <string name="simple_scanner_fragment_activity">ZBar Scanner - Simple Fragment Activity</string>
+    <string name="simple_activity_sample">Simple Activity Sample</string>
+    <string name="simple_fragment_sample">Simple Fragment Sample</string>
+    <string name="activity_sample">Full Activity Sample</string>
+    <string name="fragment_sample">Full Fragment Sample</string>
+    <string name="toggle_flash">闪光灯</string>
+    <string name="flash_on">闪光灯 [开]</string>
+    <string name="flash_off">闪光灯 [关]</string>
+    <string name="auto_focus_on">自动对焦 [开]</string>
+    <string name="auto_focus_off">自动对焦 [关]</string>
+    <string name="formats">格式</string>
+    <string name="choose_formats">选择格式</string>
+    <string name="select_camera">选择摄像头</string>
+    <string name="ok_button">确认</string>
+    <string name="cancel_button">取消</string>
+</resources>

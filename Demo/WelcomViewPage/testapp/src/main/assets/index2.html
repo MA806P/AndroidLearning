@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script language="javascript">
+    
+
+	function call(){
+		CallApp('Test', {a1:100,a2:200}, function(data){
+			alert(data.a);
+		})
+	}
+
+	function openWebView(name, url){
+		CallApp('OpenWebView', [name, url], function(data){
+			//alert('success:' + name);
+		});
+	}
+
+
+</script>
+<body>
+	<h1>Index2<h1><br/>
+<div style="font-size: 30px;">
+
+    <a href="javascript:alert('abc')">alert</a><br/>
+    <a href="javascript:confirm('abc')">confirm</a><br/>
+
+    <a href="javascript:call()">call</a><br/>
+	<a href="javascript:openWebView('test1', 'http://192.168.3.87:32769/index.html')">Open1</a><br/>
+	<a href="javascript:openWebView('test2', 'http://192.168.3.87:32769/index2.html')">Open2</a><br/>
+<a href="javascript:openWebView('main', 'http://192.168.3.87:32769/index2.html')">Main</a><br/>
+<a href="javascript:CallApp('Back')">Back</a><br/>
+<a href="javascript:CallApp('Close')">Close</a><br/>
+<a href="javascript:CallApp('CallPhone', ['13825152091'])">CallPhone</a><br/>
+</div>
+</body>
+
+</html>

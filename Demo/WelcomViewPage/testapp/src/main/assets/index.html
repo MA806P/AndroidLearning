@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script language="javascript">
+    
+	function call(){
+		CallApp('Test', {a1:100,a2:200}, function(data){
+			alert(data.a);
+		})
+	}
+
+	function openWebView(name, url){
+		CallApp('OpenWebView', {name:name, url:url}, function(data){
+			//alert('success:' + name);
+		});
+	}
+
+	function OpenPhoto(){
+		CallApp('PhotoAlbum',[], function(data){
+			console.log(data);
+			document.getElementById('img1').setAttribute('src',data.value);
+		})
+	}
+
+	function OpenCamera(){
+		CallApp('PhotoCamera',[], function(data){
+			console.log(data);
+			document.getElementById('img1').setAttribute('src',data.value);
+		})
+	}
+	function BarCode(){
+		CallApp('BarCode',[], function(data){
+			console.log(data);
+			document.getElementById('code').value = data.code + '/' + data.format;
+		})
+	}
+
+</script>
+<body>
+	<h1>Index1<h1><br/>
+		
+<div style="font-size: 30px;">
+/raw/storage/emulated/0/DCIM/Camera/IMG_20190114_224211.jpg
+    <a href="javascript:alert('abc')">alert</a><br/>
+    <a href="javascript:confirm('abc')">confirm</a><br/>
+    <a href="javascript:call()">call</a><br/>
+	<a href="javascript:CallApp('Open', ['test1', 'http://192.168.3.87:32769/index.html'])">Open1</a><br/>
+	<a href="javascript:CallApp('Open', ['test2', 'http://192.168.3.87:32769/index2.html'])">Open2</a><br/>
+	<a href="javascript:CallApp('Home')">Home</a><br/>
+	<a href="javascript:CallApp('Open', ['php', 'http://192.168.3.87:32769/p.php'])">PHP</a><br/>
+	<a href="javascript:CallApp('Back')">Back</a><br/>
+	<a href="javascript:CallApp('Toast', ['test1111222'])">Toast</a><br/>
+	<a href="javascript:CallApp('Close')">Close</a><br/>
+	<a href="javascript:CallApp('Close', ['test2'])">CloseTest2</a><br/>
+	<a href="javascript:CallApp('CloseApp')">CloseApp</a><br/>
+	<a href="javascript:CallApp('Vibrator',[2000])">Vibrator</a><br/>
+	<a href="javascript:OpenPhoto()">PhotoAlbum</a><br/>
+	<a href="javascript:OpenCamera()">OpenCamera</a><br/>
+	<input id="code" size="30" />
+	<a href="javascript:BarCode()">BarCode</a><br/>
+	<img id="img1"/>
+</div>
+</body>
+
+</html>
